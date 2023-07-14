@@ -1,0 +1,14 @@
+{
+  "recommendations": [
+    "nrwl.angular-console",
+    "esbenp.prettier-vscode",
+    "firsttris.vscode-jest-runner",
+    "dbaeumer.vscode-eslint",
+    "johnpapa.angular-essentials",
+    "pranaygp.vscode-css-peek",
+    "usernamehw.errorlens",
+    "eamodio.gitlens",
+    "quicktype.quicktype",
+    "christian-kohler.path-intellisense"
+  ]
+}
