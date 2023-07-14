@@ -2,7 +2,10 @@
   "name": "@session-monopoly/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "prettier-api": "npx prettier apps/api/**/*.ts --write",
+    "prettier-fe": "npx prettier apps/fe/**/*.ts --write"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~16.1.0",
