@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "prettier-api": "npx prettier apps/api/**/*.ts --write",
-    "prettier-fe": "npx prettier apps/fe/**/*.ts --write"
+    "prettier-fe": "npx prettier apps/fe/**/*.{html,ts}  --write"
   },
   "private": true,
   "dependencies": {
@@ -19,6 +19,7 @@
     "@nestjs/common": "^10.0.2",
     "@nestjs/core": "^10.0.2",
     "@nestjs/platform-express": "^10.0.2",
+    "@nestjs/swagger": "^7.1.1",
     "@nx/angular": "16.5.2",
     "axios": "^1.0.0",
     "reflect-metadata": "^0.1.13",
