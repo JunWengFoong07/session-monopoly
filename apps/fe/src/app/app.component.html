@@ -1,2 +1,6 @@
-<session-monopoly-nx-welcome></session-monopoly-nx-welcome>
-<router-outlet></router-outlet>
+<ng-container *ngFor="let msg of msgList()">
+    <p>{{msg.id}} said: {{msg.msg}}</p>    
+</ng-container>
+
+<input type="text" [(ngModel)]="msg"> 
+<button (click)="sendMessage()" [disabled]="msg === ''">send</button>

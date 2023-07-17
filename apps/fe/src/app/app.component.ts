@@ -1,14 +1,31 @@
-import { Component } from '@angular/core'
+import { Component, OnInit, inject } from '@angular/core'
 import { RouterModule } from '@angular/router'
-import { NxWelcomeComponent } from './nx-welcome.component'
+import { SocketService } from './socket.service'
+import { FormsModule } from '@angular/forms'
+import { CommonModule } from '@angular/common'
 
 @Component({
 	standalone: true,
-	imports: [NxWelcomeComponent, RouterModule],
+	imports: [RouterModule, FormsModule, CommonModule],
 	selector: 'session-monopoly-root',
 	templateUrl: './app.component.html',
 	styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-	title = 'fe'
+export class AppComponent implements OnInit {
+
+	#socketService = inject(SocketService)
+
+	msg = ''
+	msgList = this.#socketService.msg
+
+	ngOnInit(): void {
+		this.#socketService.connect()
+	}
+
+	sendMessage() {
+		this.#socketService.sendMessage(this.msg)
+		this.msg = ''
+	}
+
+
 }

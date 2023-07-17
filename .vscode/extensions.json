@@ -9,6 +9,7 @@
     "usernamehw.errorlens",
     "eamodio.gitlens",
     "quicktype.quicktype",
-    "christian-kohler.path-intellisense"
+    "christian-kohler.path-intellisense",
+    "infinity1207.angular2-switcher"
   ]
 }
